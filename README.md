@@ -1,4 +1,4 @@
 boylecamp
 =========
 
-Solutioneering best-of-breed trolling efforts for @andymboyle, yo.
+The terrible, yet artisanal, code that sits underneath [andymboyle.info](http://www.andymboyle.info)

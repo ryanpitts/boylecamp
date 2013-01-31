@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+    <TITLE>Andy M. Boyle: What's this Hoff for?</TITLE>
+
+    <meta property="og:title" content="Andy M. Boyle" />
+    <meta property="og:type" content="public_figure" />
+    <meta property="og:image" content="http://www.andymboyle.info/_resources/boyle_head_yankees100.png" />
+    <meta property="og:url" content="http://www.andymboyle.info" />
+    <meta property="og:description" content="Andy M. Boyle, yo." />
+    <meta property="og:site_name" content="Andy M. Boyle" />
+    <meta property="fb:admins" content="701902166" />
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type="text/javascript">
+    function addSong() {
+        var embedSong = '<embed name=\"andy you are a firework\" src=\"http://dl.dropbox.com/u/743518/boyle_info_bg.mp3\" loop=\"true\" hidden=\"true\" autostart=\"true\"></embed>';
+    }
+    
+    $(document).ready(function(){
+        addSong();
+        var bobble = $(".bobble");
+        var spin = $(".spin");
+        var direction = "right";
+        rotate(0, 0);
+        function rotate(degree, degree2) {
+            bobble.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
+            bobble.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});
+            spin.css({ WebkitTransform: 'rotate(' + degree2 + 'deg)'});
+            spin.css({ '-moz-transform': 'rotate(' + degree2 + 'deg)'});
+            timer = setTimeout(function() {
+                if (direction != "right") {
+                    rotate(degree-1, ++degree2);
+                    if (degree < -15) {direction = "right"};
+                } else {
+                    rotate(++degree, ++degree2);
+                    if (degree > 15) {direction = "left"};
+                };
+            },7);
+        }
+    });
+    </script>
+    <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <style type="text/css" media="all">
+        html, body {height: 100%; margin: 0; padding: 0;}
+        body {font-family: "Bangers", "Comic Sans", "Apple Casual", "Marker Felt", sans-serif;}
+        img#bgbg {position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+        div#bg {position: relative; display: inline-block; position: fixed; top: 0; left: 450px; height: 100%;}
+        img#hoff {z-index: 0; height: 100%;}
+        img#lilhoff {z-index: 0; width: 100px; margin: 30px auto 0; display: block;}
+        img.head80 {width: 80px; top: 33%; z-index: 50; position: absolute;}
+        img#head1 {left: -80px;}
+        img#head2 {left: 0px;}
+        img#head3 {left: 80px;}
+        img#head4 {right: 80px;}
+        img#head5 {right: 0px;}
+        img#head6 {right: -80px;}
+        #msg1, #msg2 {position: absolute; width: 370px; top: 30px; text-align: center; font-size: 42px; font-weight: bold; z-index: 33;}
+        #msg1 {left: -400px;}
+        #msg2 {right: -400px;}
+        img#fork {position: absolute; bottom: 68px; left: 78px;}
+    </style>
+</HEAD>
+
+<body>
+    <img id="bgbg" src="rainbow.jpg" />
+    <div id="song">
+        <embed name="what andy's life is for" src="http://dl.dropbox.com/u/743518/knight_rider_first_night.mp3" loop="true" hidden="true" autostart="true"></embed>
+    </div>
+    <a href="http://www.andymboyle.info/"><img id="fork" src="fork.png" /></a>
+    <div id="bg">
+        <img id="hoff" class="" src="hoff.gif" />
+        <img id="head1" class="bobble head80" src="boyle_head_hoff.png" />
+        <img id="head2" class="bobble head80" src="boyle_head_hoff.png" />
+        <img id="head3" class="bobble head80" src="boyle_head_hoff.png" />
+        <img id="head4" class="bobble head80" src="boyle_head_hoff.png" />
+        <img id="head5" class="bobble head80" src="boyle_head_hoff.png" />
+        <img id="head6" class="bobble head80" src="boyle_head_hoff.png" />
+        <div id="msg1">
+            <img src="stapp.jpg">
+            What&rsquo;s this Hoff fooooooorrrr?
+            <img id="lilhoff" class="spin" src="hoff.gif" />
+        </div>
+        <div id="msg2">
+            <img src="stapp.jpg">
+            What&rsquo;s this Hoff fooooooorrrr?
+            <img id="lilhoff" class="spin" src="hoff.gif" />
+        </div>
+    </div>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6516200; 
+var sc_invisible=1; 
+var sc_security="c05f5c12"; 
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="tumblr tracker"
+href="http://statcounter.com/tumblr/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/6516200/0/c05f5c12/1/"
+alt="tumblr tracker" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+</body>
+</html>

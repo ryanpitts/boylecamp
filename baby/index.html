@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Andy M. Boyle</title>
+
+    <meta property="og:title" content="Andy M. Boyle" />
+    <meta property="og:type" content="public_figure" />
+    <meta property="og:image" content="http://www.andymboyle.info/_resources/boyle_head_yankees100.png" />
+    <meta property="og:url" content="http://www.andymboyle.info" />
+    <meta property="og:description" content="Andy M. Boyle, yo." />
+    <meta property="og:site_name" content="Andy M. Boyle" />
+    <meta property="fb:admins" content="701902166" />
+
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js'></script>
+    <script src="http://api.html5media.info/1.1.4/html5media.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var url = window.location.toString();
+        if (url.indexOf('?') != -1) {
+            qs = location.search;
+            qs = unescape(qs).replace(/(<([^>]+)>)/ig,"");
+            if (qs.indexOf("keanumode") != -1) {
+                $('body').css('background-image', 'url(\'/_resources/matrix.gif\')').css('background-repeat', 'repeat');
+                $('a#dance').css('background-image', 'url(\'/_resources/dancing_baby_body_boyle.gif\')');
+            };
+            if (qs.indexOf("creepymode") != -1) {
+                $('body').css('background', 'transparent url(/_resources/red-curtain.jpg) no-repeat center center fixed').css('-webkit-background-size', 'cover').css('-moz-background-size', 'cover').css('-o-background-size', 'cover').css('background-size', 'cover');
+                $('a#dance').css('background-image', 'url(\'/_resources/dancing_baby_body_boyle_slow.gif\')');
+                $('#the-song').remove();
+                var audio = $('<embed name=\"andy you are a firework\" src=\"http://dl.dropbox.com/u/743518/palmer.mp3\" loop=\"true\" hidden=\"true\" autostart=\"true\"></embed>');
+                audio.appendTo('#song-wrapper');
+            };
+            if (qs.indexOf("callme") != -1) {
+                $('a#dance').css('background-image', 'url(\'/_resources/dancing_baby_boyle.gif\')');
+                $('#the-song').remove();
+                var audio = $('<embed name=\"andy you are a firework\" src=\"http://dl.dropbox.com/u/743518/call_me_maybe.mp3\" loop=\"true\" hidden=\"true\" autostart=\"true\"></embed>');
+                audio.appendTo('#song-wrapper');
+            };
+        }
+    });
+    </script>
+    
+    <style type="text/css" media="all">
+        body {margin: 0; padding: 0; font-family: arial, sans-serif; background-color: #000; text-align: center;}
+        a#dance {display: block; width: 170px; height: 195px; margin: 15% auto 0; background: transparent url('/_resources/dancing_baby_boyle.gif') no-repeat; z-index: 99;}
+        #versions {position: absolute; bottom: 80px; left: 50%; margin-left: -360px; padding: 0; list-style: none; overflow: hidden; width: 660px;}
+        #versions li {float: left; padding: 10px; width: 70px; display: inline-block; margin: 10px;}
+        #versions li a {text-decoration: none; color: #cdcdcd; font-size: 14px; text-shadow: #fff 0 0 5px;
+               -webkit-transition:text-shadow,color .25s ease-in;  
+               -moz-transition:text-shadow,color .25s ease-in;  
+               -o-transition:text-shadow,color .25s ease-in;  
+               transition:text-shadow,color .25s ease-in;  
+            }
+        #versions li a:hover {color: #fff; text-shadow: #111 0 0 2px, #237acb 0 0 10px, #237acb 0 0 20px;}
+        #the-song {position: absolute; bottom: 50px; left: 50%; width: 550px; margin-left: -300px;}
+        #bg {width: 100%; height: 100%; z-index: 1; position: fixed; top: 0; left: 0;}
+        @media screen and (width: 666px) {
+            body {background-color: papayaWhip;}
+            a#dance {background: transparent url('/_resources/dancing_baby_body_boyle.gif') no-repeat; z-index: 99;}
+        }
+        #grue {position: absolute; top: 5px; right: 5px; font-size: 11px; color: #444; text-decoration: none;}
+    </style>
+
+</head>
+
+<body>
+    <a id="dance" href="http://www.andymboyle.info/boyfights/"></a>
+    <a id="grue" href="/grue/">&gt; grue</a>
+    <ul id="versions">
+        <li><a href="/firework/">Version 1.0</a></li>
+        <li><a href="/poppin/">Version 2.0</a></li>
+        <li><a href="/hoff/">Version 2.5</a></li>
+        <li><a href="/boyfights/">Version 4.0</a></li>
+        <li><a href="/the-tweet/">Version 5.0</a></li>
+        <li><a style="opacity:.3;" href="/baby/?creepymode">Creepy Mode</a></li>
+    </ul>
+    <span id="song-wrapper">
+        <audio id="the-song" src="http://dl.dropbox.com/u/743518/call_me_gangnam.mp3" controls autoplay loop></audio>
+    <span>
+    
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6516200; 
+var sc_invisible=1; 
+var sc_security="c05f5c12"; 
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="tumblr tracker"
+href="http://statcounter.com/tumblr/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/6516200/0/c05f5c12/1/"
+alt="tumblr tracker" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+</body>
+</html>

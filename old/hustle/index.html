@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+    <TITLE>Andy M. Boyle</TITLE>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type="text/javascript">
+    var url = window.location.toString();
+    if (url.indexOf('?') == -1) {
+        window.location = url + "?popped=Ever since I can remember, I been poppin' my collar. And listening to Creed.";
+    }
+    qs = location.search;
+    qs = unescape(qs).replace(/(<([^>]+)>)/ig,"");
+    var pairs = qs.split( "&" );
+    var text = qs.replace("?popped=","");
+    text = unescape(text);
+    function addText() {
+        document.getElementById("text").innerHTML += text;
+    }
+    $(document).ready(function(){
+        var winWidth = $(window).width();
+        addText();
+        var head = $(".head");
+        var direction = "right";
+        rotate(0);
+        function rotate(degree) {
+            head.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
+            head.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});
+            timer = setTimeout(function() {
+                if (direction != "right") {
+                    rotate(degree-1);
+                    if (degree < -15) {direction = "right"};
+                } else {
+                    rotate(++degree);
+                    if (degree > 15) {direction = "left"};
+                };
+            },7);
+        }
+        for (i=0; i<10; i++) {
+            var left = Math.floor(Math.random()*winWidth)-150;
+            var speed = Math.floor(Math.random()*20);
+            var size = Math.floor(Math.random()*70)+30;
+            var z = Math.floor(Math.random()*99);
+            $('#head'+i).css('left', left).css('z-index', z).attr('scrollamount', speed);
+            $('#head'+i).children('img').css('width', size);
+        }
+        for (i=10; i<20; i++) {
+            var top = Math.floor(Math.random()*300);
+            var speed = Math.floor(Math.random()*20);
+            var size = Math.floor(Math.random()*70)+30;
+            var z = Math.floor(Math.random()*99);
+            $('#head'+i).css('top', top).css('z-index', z).attr('scrollamount', speed);
+            $('#head'+i).children('img').css('width', size);
+        }
+    });
+    </script>
+    <style type="text/css" media="all">
+        body {background-color: #e3e3e3; margin: 0;}
+        div#text {position: absolute; top: -300; left: 455; width: 250px; color: #281608; background-color: #fff; border: 2px solid #281608; padding: 5px 15px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; line-height: 1.5;}
+        img#popped {width: 500px; height: 500px; position: absolute; left: 40%; top: 47px; z-index: 50;}
+        div#top {background-color: #fff; height: 360px; position: relative;}
+        div#song {}
+        #text {margin: 30px 20px; text-align: center; font-size: 90px; line-height: 110px; color: #111; font-family: "Comic Sans", "Apple Casual", sans-serif;}
+        img.head {width: 50px;}
+        .marquee {position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 98;}
+        .heads {height: 200px; width: 100%; position: absolute; bottom: 0; left: 0; background: transparent url('boyle_head_yankees.png') repeat-x;}
+    </style>
+
+</HEAD>
+
+<body>
+    <div id="song">
+        <embed name="what andy's life is for" src="http://dl.dropbox.com/u/743518/creed_life.mp3" loop="true" hidden="true" autostart="true"></embed>
+    </div>
+
+    <marquee class="marquee" direction="down" id="head0"><img class="head" src="boyle_head_yankees.png" /></marquee>
+    <marquee class="marquee" direction="down" id="head1"><img class="head" src="boyle_head_yankees.png" /></marquee>
+    <marquee class="marquee" direction="down" id="head2"><img class="head" src="boyle_head_yankees.png" /></marquee>
+    <marquee class="marquee" direction="down" id="head3"><img class="head" src="boyle_head_yankees.png" /></marquee>
+    <marquee class="marquee" direction="down" id="head4"><img class="head" src="boyle_head_yankees.png" /></marquee>
+    <marquee class="marquee" direction="up" id="head5"><img class="head" src="boyle_head_yankees.png" /></marquee>
+    <marquee class="marquee" direction="up" id="head6"><img class="head" src="boyle_head_yankees.png" /></marquee>
+    <marquee class="marquee" direction="up" id="head7"><img class="head" src="boyle_head_yankees.png" /></marquee>
+    <marquee class="marquee" direction="up" id="head8"><img class="head" src="boyle_head_yankees.png" /></marquee>
+    <marquee class="marquee" direction="up" id="head9"><img class="head" src="boyle_head_yankees.png" /></marquee>
+    <div id="top">
+        <marquee class="marquee" direction="left" id="head10"><img class="head" src="boyle_head_yankees.png" /></marquee>
+        <marquee class="marquee" direction="left" id="head11"><img class="head" src="boyle_head_yankees.png" /></marquee>
+        <marquee class="marquee" direction="left" id="head12"><img class="head" src="boyle_head_yankees.png" /></marquee>
+        <marquee class="marquee" direction="left" id="head13"><img class="head" src="boyle_head_yankees.png" /></marquee>
+        <marquee class="marquee" direction="left" id="head14"><img class="head" src="boyle_head_yankees.png" /></marquee>
+        <marquee class="marquee" direction="right" id="head15"><img class="head" src="boyle_head_yankees.png" /></marquee>
+        <marquee class="marquee" direction="right" id="head16"><img class="head" src="boyle_head_yankees.png" /></marquee>
+        <marquee class="marquee" direction="right" id="head17"><img class="head" src="boyle_head_yankees.png" /></marquee>
+        <marquee class="marquee" direction="right" id="head18"><img class="head" src="boyle_head_yankees.png" /></marquee>
+        <marquee class="marquee" direction="right" id="head19"><img class="head" src="boyle_head_yankees.png" /></marquee>
+    </div>
+
+    <img id="popped" src="boylepopped.png" />
+
+    <h1 id="text"></h1>
+
+
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6516200; 
+var sc_invisible=1; 
+var sc_security="c05f5c12"; 
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="tumblr tracker"
+href="http://statcounter.com/tumblr/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/6516200/0/c05f5c12/1/"
+alt="tumblr tracker" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+</body>
+</html>

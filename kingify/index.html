@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="You, too, can sniff the web like it was meant to be sniffed." />
+    <title>KING-IFIER: Enter a URL to make any story a #BoyleStory</title>
+    <script type="text/javascript">
+    var frame = null;
+    var form = "<div id='startform'><form method='get' action=''><h1>Enter a URL</h1><input type='text' name='king' /></form><h4>Make your story a #BoyleStory</h4></div>";
+    var overlay = "<div id='overlay'></div>";
+    var url = window.location.toString();
+
+    if (url.indexOf('?') != -1) {
+        qs = location.search;
+        qs = unescape(qs).replace(/(<([^>]+)>)/ig,"");
+        var site = qs.replace("?king=","");
+        if (!(site.indexOf("http://") == 0)) {
+            site = "http://" + site;
+        };
+        frame = "<iframe id='frame' width='100%' height='100%' src='" + site + "' border='0' noborder='noborder' frameborder='0' padding='0' spacing='0'></iframe>";
+    }
+    
+    function resizeIframe() {
+        var height = document.documentElement.clientHeight;
+        height -= document.getElementById('frame').offsetTop;
+        document.getElementById('frame').style.height = height +"px";
+    };
+    
+    function getSite() {
+        if (frame) {
+            document.getElementById("container").innerHTML += frame;
+            resizeIframe();
+        } else {
+            document.getElementById("container").innerHTML += form;
+        }
+        document.getElementById("body").innerHTML += overlay;
+    }
+    window.onresize = resizeIframe;
+    </script>
+    
+    <style type="text/css" media="all">
+        body {background-color: #111; color: #ddd; font-family: Georgia, Times, serif; margin: 0; padding: 0; height: 100.1%;}
+        #startform {text-align: center;}
+        #startform form {margin: 100px auto 0;}
+        #startform input {font-size: 21px; padding: 3px; width: 400px;}
+        #container {width: 100%; height: 100%; z-index: 1;}
+        #overlay {position: fixed; height: 370px; width: 300px; bottom: 0; left: 40px; z-index: 99; background: transparent url('http://dl.dropbox.com/u/743518/boyle_king.png') no-repeat;}
+    </style>
+</head>
+<body id="body" onload="getSite()">
+    <div id="container"></div>
+
+    <!-- Start of StatCounter Code -->
+    <script type="text/javascript">
+    var sc_project=6257931; 
+    var sc_invisible=1; 
+    var sc_security="bbdf4019";
+    </script>
+
+    <script type="text/javascript"
+    src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+    class="statcounter"><a title="godaddy hit counter"
+    href="http://statcounter.com/godaddy_website_tonight/"
+    target="_blank"><img class="statcounter"
+    src="http://c.statcounter.com/6257931/0/bbdf4019/1/"
+    alt="godaddy hit counter" ></a></div></noscript>
+    <!-- End of StatCounter Code -->
+</body>
+</html>

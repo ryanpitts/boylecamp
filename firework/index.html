@@ -1,0 +1,136 @@
+<HTML>
+<HEAD>
+    <TITLE>Andy M. Boyle</TITLE>
+    <meta property="og:title" content="Andy M. Boyle" />
+    <meta property="og:type" content="public_figure" />
+    <meta property="og:image" content="http://www.andymboyle.info/_resources/boyle_head_yankees100.png" />
+    <meta property="og:url" content="http://www.andymboyle.info" />
+    <meta property="og:description" content="Andy M. Boyle, yo." />
+    <meta property="og:site_name" content="Andy M. Boyle" />
+    <meta property="fb:admins" content="701902166" />
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&login=onemoreryan&apiKey=R_094fcccc1f41804a83383282862d1cf2"></script>
+    <script type="text/javascript">
+    var url = window.location.toString();
+    if (url.indexOf('?') == -1) {
+        window.location = url + "?Journalism=you're a firework. I will save you.";
+    }
+    qs = location.search;
+    qs = unescape(qs).replace(/(<([^>]+)>)/ig,"");
+    var pairs = qs.split( "&" );
+    var text = "";
+    var nerkelback = false;
+    var boyles_secret_yankee_love = false;
+    var yokofy = false;
+    for ( i in pairs )
+    {
+        var keyval = pairs[ i ].split( "=" );
+        keyval[0] = keyval[0].replace("?","");
+        text += "<h3>" + keyval[0] + ", " + keyval[1] + "</h3>";
+        if (keyval[0] == "Nickelback") { nerkelback = true };
+        if (keyval[0] == "Yankees" || keyval[0] == "A-Rod") { boyles_secret_yankee_love = true };
+        if (keyval[0] == "Yoko" || keyval[0] == "Yoko Ono") { yokofy = true };
+    }
+    text = unescape(text);
+    function addText() {
+        document.getElementById("text").innerHTML += text;
+    }
+    function addSong() {
+        var embedSong = '<embed name=\"andy you are a firework\" src=\"http://dl.dropbox.com/u/743518/boyle_info_bg.mp3\" loop=\"true\" hidden=\"true\" autostart=\"true\"></embed>';
+        if (nerkelback == true) { 
+            embedSong = '<embed name=\"andy you are a firework\" src=\"http://dl.dropbox.com/u/743518/nerkelback.mp3\" loop=\"true\" hidden=\"true\" autostart=\"true\"></embed>';
+        } else if (boyles_secret_yankee_love == true) { 
+            embedSong = '<embed name=\"andy you are a firework\" src=\"http://dl.dropbox.com/u/743518/dont_wanna_live.mp3\" loop=\"true\" hidden=\"true\" autostart=\"true\"></embed>';
+        } else if (yokofy == true) {
+            embedSong = '<embed name=\"andy you are a firework\" src=\"https://dl.dropbox.com/u/743518/yoko_fireworks.mp3\" loop=\"true\" hidden=\"true\" autostart=\"true\"></embed>';
+        };
+        document.getElementById("song").innerHTML += embedSong;
+    }
+    
+    $(document).ready(function(){
+        addSong();
+        addText();
+        var head = $("img#head");
+        if (boyles_secret_yankee_love == true) {
+            $("img#head").hide();
+            $("img#boyles_secret_yankee_love").show();
+            var head = $("img#boyles_secret_yankee_love");
+        };
+        var direction = "right";
+        rotate(0);
+        function rotate(degree) {
+            head.css({ WebkitTransform: 'rotate(' + degree + 'deg)'});
+            head.css({ '-moz-transform': 'rotate(' + degree + 'deg)'});
+            timer = setTimeout(function() {
+                if (direction != "right") {
+                    rotate(degree-1);
+                    if (degree < -15) {direction = "right"};
+                } else {
+                    rotate(++degree);
+                    if (degree > 15) {direction = "left"};
+                };
+            },7);
+        }
+    });
+    </script>
+    <style type="text/css" media="all">
+        div#text {position: absolute; top: -300; left: 455; width: 250px; color: #281608; background-color: #fff; border: 2px solid #281608; padding: 5px 15px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; line-height: 1.5;}
+        div#share {width: 200px; text-align: center; margin: 20px auto;}
+        div#song {}
+    </style>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" VLINK="0000FF">
+<h1 style="text-indent:-9999px; float: left;">Andy M. Boyle</h1>
+<div id="song"></div>
+
+<div id="share">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="andymboyle">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</div>
+
+<!-- Yes, here there be tables. This is in keeping with the http://williamhartnett.com theme. Tell 'em ryanpitts sent you. -->
+<TABLE WIDTH="100%" HEIGHT="79" CELLPADDING=0 CELLSPACING=0 BORDER="0">
+<TR>
+    <TD BACKGROUND="BORDER_1.gif" WIDTH="800"></TD>
+    <TD BACKGROUND="BORDER_1.gif"></TD>
+</TR>
+</TABLE>
+
+<TABLE CELLPADDING=0 CELLSPACING=0 BORDER="0" ALIGN="CENTER">
+<TR>
+    <TD ALIGN="CENTER"><a style="position: relative; text-decoration: none;" href="http://www.ryanpitts.com/projects/dodson-ator/?tell=andymboyle.com">
+        <img src="boyle_bg.jpg" alt="" border="0">
+        <img id="head" src="boyle_head.png" style="position: absolute; top: -360; left: 265;" border="0">
+        <img id="boyles_secret_yankee_love" src="boyle_head_yankee.png" style="position: absolute; top: -380; left: 225; display: none;" border="0">
+        <div id="text" style=""></div>
+    </a></TD>
+</TR>
+</TABLE>
+
+
+
+<TABLE WIDTH="100%" HEIGHT="79" CELLPADDING=0 CELLSPACING=0 BORDER="0">
+<TR>
+    <TD BACKGROUND="BORDER_1.gif" WIDTH="800"></TD>
+    <TD BACKGROUND="BORDER_1.gif"></TD>
+</TR>
+
+</TABLE>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=6516200; 
+var sc_invisible=1; 
+var sc_security="c05f5c12"; 
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="tumblr tracker"
+href="http://statcounter.com/tumblr/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/6516200/0/c05f5c12/1/"
+alt="tumblr tracker" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+</body>
+</html>

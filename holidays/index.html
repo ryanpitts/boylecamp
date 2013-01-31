@@ -1,0 +1,83 @@
+<!doctype html>
+<head>
+    <title>#Boyle4TheHolidays</title>
+    <meta name="description" content="Give something back, for all that Andy M. Boyle has given to you.">
+    <link href='http://fonts.googleapis.com/css?family=Spicy+Rice' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bilbo' rel='stylesheet' type='text/css'>
+    <style type="text/css" media="all">
+        body {font-family: "Bilbo", Arial, sans-serif; background-color: #ebe3e0; color: #2a0f0e;}
+        .container {margin: 15px 30px 80px; position: relative; padding: 0 0 0 300px;}
+        .letter {float: left; width: 500px; margin: 0 40px 40px 0; font-size: 26px;}
+        .list {float: left; width: 300px; font-size: 14px;}
+        a {color: #73211f;}
+        p {margin: 0 0 1em .33em; line-height: 1.4;}
+        h1, h2 {margin-bottom: 12px; font-size: 80px; color: #2a0f0e; font-family: "Spicy Rice", serif;}
+        h2 {font-size: 21px; margin: 0; font-weight: normal;}
+        ul {margin: 0 0 2em;}
+        li {font-size: 26px; line-height: 1.2; margin-bottom: .67em;}
+        img#snowflakes {position: absolute; top: 20px; right: 20px;}
+        img#head {position: absolute; top: 15px; left: 0;}
+        .sig {text-align: right;}
+		#tweet-button {float: right;}
+    </style>
+</head>
+
+<body>
+    <img id="snowflakes" src="snowflakes.png">
+    <div class="container">
+        <img id="head" src="boyle_head_santa.png">
+        <h1>#Boyle4TheHolidays</h1>
+        <div class="letter">
+        <p>It's been a magical year here at andymboyle.info, full of Creed songs and popped collars, text adventures and lorem ipsum, bobbling and boy fights. But this, THIS is the most special week of the year. That's right, it's time for our annual charity drive.</p>
+        <p>Few people know that <a href="http://www.twitter.com/andymboyle">@andymboyle</a>'s passion for saving journalism by watching movies and very nearly learning Python and javascript is matched only by other people's compassion for their fellow man. So each year, we strive to warm hearts just like Andy has warmed all of ours (seriously, did you <strong>see</strong> <a href="http://www.youtube.com/user/andymboyle">his holiday videos</a>?)</p>
+        <p>You should, of course, give back in whatever way the spirit of @andymboyle moves you, but allow us to make two recommendations:</p>
+        <ul>
+            <li>A <a href="https://cpj.org/about/donate-online.php">donation to the Committee to Protect Journalists</a>. Save some journalism globally.</li>
+            <li>A donation of time and/or supplies to your local homeless shelter. Toiletries, food and warm clothes are always good, of course, but take a moment to ask about particular needs. Clean cotton socks, for instance, are like gold.</li>
+        </ul>
+        <p>If you do participate in <a href="https://twitter.com/#!/search/Boyle4TheHolidays">#Boyle4TheHolidays</a>, use the hashtag and let us know. We'd love to add your name to the list of Boyle's Little Helpers.</p>
+        <p class="sig">Best holiday wishes to you and yours,<br>The andymboyle.info team</p>
+        </div>
+        <div class="list">
+            <h2>
+				<span id="tweet-button">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-text="I donated ... &lt;well, what DID I donate?&gt;" data-size="large" data-count="none" data-hashtags="Boyle4TheHolidays">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</span>
+				Boyle&rsquo;s Little Helpers
+			</h2>
+
+			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+            <script>
+            new TWTR.Widget({
+              version: 2,
+              type: 'search',
+              search: '#Boyle4TheHolidays',
+              interval: 30000,
+              title: '',
+              subject: '',
+              width: 300,
+              height: 600,
+              theme: {
+                shell: {
+                  background: '#ebe3e0',
+                  color: '#2a0f0e'
+                },
+                tweets: {
+                  background: '#ebe3e0',
+                  color: '#444444',
+                  links: '#73211f'
+                }
+              },
+              features: {
+                scrollbar: true,
+                loop: false,
+                live: true,
+                behavior: 'all'
+              }
+            }).render().start();
+            </script>
+        </div>
+    </div>
+</body>
+</html>
